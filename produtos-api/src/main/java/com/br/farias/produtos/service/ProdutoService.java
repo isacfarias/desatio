@@ -5,15 +5,17 @@ import com.br.farias.produtos.convert.ProdutoConvert;
 import com.br.farias.produtos.dto.ProdutoDto;
 import com.br.farias.produtos.dto.ProdutoRequestDto;
 import com.br.farias.produtos.repository.ProdutoRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class ProdutoService {
 
-    private ProdutoRepository repository;
+    private final ProdutoRepository repository;
 
     public List<ProdutoDto> all() {
         return this.repository.findAll().stream().map(ProdutoConvert::entityToDto).collect(Collectors.toList());

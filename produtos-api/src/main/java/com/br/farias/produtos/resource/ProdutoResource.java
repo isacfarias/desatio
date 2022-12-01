@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping(value ="/produtos")
 @RequiredArgsConstructor
 public class ProdutoResource {
 
@@ -22,7 +22,7 @@ public class ProdutoResource {
     }
 
     @GetMapping("/{id}")
-    public ProdutoDto byId(Long id) {
+    public ProdutoDto byId(@PathVariable Long id) {
         return this.service.byId(id);
     }
 
