@@ -1,13 +1,13 @@
-package com.br.farias.desafio2;
+package com.br.farias.produtos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Desafio2Application {
+public class App {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Desafio2Application.class, args);
+		SpringApplication.run(App.class, args);
 	}
 
 }
