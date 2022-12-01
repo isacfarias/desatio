@@ -1,0 +1,2 @@
+insert into produto (cadastro, descricao, observacao, quantidade, valor_unitario) values (current_date, 'Vassoura Harry Potter', 'edição limitada', 1, 50000);
+insert into produto (cadastro, descricao, observacao, quantidade, valor_unitario) values (current_date, 'Capa da Invisibilidade', 'edição limitada', 1, 4050000);

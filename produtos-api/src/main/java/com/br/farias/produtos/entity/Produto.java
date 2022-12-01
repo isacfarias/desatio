@@ -1,12 +1,8 @@
 package com.br.farias.produtos.entity;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.With;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -14,10 +10,13 @@ import java.time.LocalDate;
 @Builder
 @With
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "produto")
 public class Produto {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDate cadastro;
     private String descricao;
